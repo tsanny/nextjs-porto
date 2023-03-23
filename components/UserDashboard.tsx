@@ -46,7 +46,9 @@ export default function UserDashboard() {
         )}
         {Object.keys(experienceList).map((key) => {
             return (
-                <ExperienceCard key={key} id={key} children={experienceList[key]} loadExperiences={loadExperiences} />
+                <ExperienceCard key={key} id={key} loadExperiences={loadExperiences}>
+                    {experienceList[key]}
+                </ExperienceCard>
             )
         })}
         </div>
