@@ -86,7 +86,10 @@ export default function UserDashboard() {
               placeholder="Enter experience"
               value={experience.title}
               onChange={(e) =>
-                setExperience({ ...experience, title: e.target.value })
+                setExperience({
+                  ...experience,
+                  title: e.target.value,
+                })
               }
               className="outline-none p-2 text-base sm:text-lg text-slate-900"
             />
@@ -95,7 +98,10 @@ export default function UserDashboard() {
               placeholder="Enter description"
               value={experience.description}
               onChange={(e) =>
-                setExperience({ ...experience, description: e.target.value })
+                setExperience({
+                  ...experience,
+                  description: e.target.value,
+                })
               }
               className="outline-none p-2 text-base sm:text-lg text-slate-900"
             />
@@ -108,15 +114,6 @@ export default function UserDashboard() {
             </button>
           </>
         )}
-        {projectList.length > 0 && <h2 className="text-center">Projects</h2>}
-        {Object.keys(projectList).map((key) => {
-          return (
-            <ProjectCard key={key} id={key} loadProjects={loadProjects}>
-              {projectList[key]}
-            </ProjectCard>
-          );
-        })}
-
         {experienceList.length > 0 && (
           <h2 className="text-center">Experiences</h2>
         )}
@@ -130,6 +127,14 @@ export default function UserDashboard() {
             >
               {experienceList[key]}
             </ExperienceCard>
+          );
+        })}
+        {projectList.length > 0 && <h2 className="text-center">Projects</h2>}
+        {Object.keys(projectList).map((key) => {
+          return (
+            <ProjectCard key={key} id={key} loadProjects={loadProjects}>
+              {projectList[key]}
+            </ProjectCard>
           );
         })}
       </div>
