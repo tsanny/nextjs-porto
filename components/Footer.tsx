@@ -5,7 +5,7 @@ export default function Footer() {
         <a href="https://www.linkedin.com/in/sulthanftr/">
           <i className="fa-brands duration-300 hover:opacity-30 cursor-pointer fa-linkedin"></i>
         </a>
-        <a href="https://github.com/sulthanftr">
+        <a href="https://github.com/tsanny">
           <i className="fa-brands duration-300 hover:opacity-30 cursor-pointer fa-square-github"></i>
         </a>
       </div>
